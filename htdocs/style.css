@@ -1,0 +1,389 @@
+@font-face {
+    font-family: 'Montserrat';
+    src: local('Montserrat Light'),
+    	 local('Montserrat-Light'),
+    	 url('../webfonts/montserratlight.woff2') format('woff2'),
+    	 url('../webfonts/montserratlight.woff') format('woff'),
+    	 url('../webfonts/montserratlight.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: local('Montserrat'),
+    	 local('Montserrat-Regular'),
+    	 url('../webfonts/montserrat.woff2') format('woff2'),
+    	 url('../webfonts/montserrat.woff') format('woff'),
+    	 url('../webfonts/montserrat.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Montserrat';
+    src: local('Montserrat Bold'),
+    	 local('Montserrat-Bold'),
+    	 url('../webfonts/montserratbold.woff2') format('woff2'),
+    	 url('../webfonts/montserratbold.woff') format('woff'),
+    	 url('../webfonts/montserratbold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+	font-family: 'Myriad Pro';
+	src: url('../webfonts/MyriadPro-Regular.eot');
+	src: local('Myriad Pro Regular'), local('MyriadPro-Regular'),
+		url('../webfonts/MyriadPro-Regular.eot?#iefix') format('embedded-opentype'),
+		url('../webfonts/MyriadPro-Regular.woff') format('woff'),
+		url('../webfonts/MyriadPro-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face{
+	font-family: 'GoodDog Cool';
+	src: url('../webfonts/GOODDC__.TTF');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face{
+	font-family: 'GoodDog';
+	src: url('../webfonts/GOODDP__.TTF');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+
+body,
+html {
+	padding: 0;
+	border: 0;
+	height: 100%;
+}
+
+body {
+	background-color: #212121;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 400;
+	letter-spacing: 2px;
+	margin: 0 auto;
+	width: 1440px;
+	/* background
+	height: 323px;
+	background-color: #383b32;*/
+}
+
+html {
+	width: 100%;
+}
+/*1. У .nav-menu 
+			-убрал width и добавил flex-wrap:wrap чтоб при большем количестве элементов
+			они переносились на следующую строку;
+			-убрал space-between,	align-items: center - он тут нафиг не нужен, по тому, что ломает разметку (лучше марджинами) =);
+			-убрал height - его нужно стараться использовать как можно реже, при добалении элементов вся разметка поломается(height-min);
+			-можно вообще сверстать на инлайн блоках( мб даже проще выйдет)
+*/
+
+.container4 {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.container4 .info {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.container4 .title {
+	color: #afc67b;
+	font-family: "GoodDog Cool";
+	font-size: 29px;
+	margin: 0;
+}
+
+.container4 .description {
+	font-size: 17px;
+	color: #e8e8e8;
+	letter-spacing: 0.5px;
+	margin: 30px 0 20px;
+	font-family: "Myriad Pro";
+	width: 165px;
+}
+
+.container4 .cost {
+	color: #e8e8e8;
+	font-family: "GoodDog";
+	font-size: 25px;
+	margin: 0;
+}
+
+
+.nav-menu {
+	display: flex;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	flex-wrap:wrap;
+	margin-top: 62px;
+	margin-right: 62px;
+}
+
+.nav-menu li{
+	margin-left: 25px;
+}
+
+.nav-menu li:nth-child(2){
+	margin-left: 72px;
+}
+
+.nav-menu li:nth-child(3){
+	margin-left: 40px;
+}
+
+.nav-menu a {
+	font-size: 35px;
+	line-height: 35px;
+	font-weight: 400;
+	font-family: 'Montserrat', sans-serif;
+	color: #afc67b;
+	/*margin-right: 5px;*/
+	text-decoration: none;
+	text-transform: uppercase;
+	letter-spacing: normal;
+}
+
+.main-content-wrapper {
+	font-family: 'Montserrat', sans-serif;
+	width: 540px;
+}
+
+.info-link {
+	background-color: #5d6942;
+	color: #afc67b;
+	/*display: block;*/
+	font-size: 49px;
+	font-weight: 400;
+	height: 93px;
+	text-decoration: none;
+	text-transform: uppercase;
+	width: 388px;
+}
+
+.event-title {
+	color: #afc67b;
+	font-size: 57px;
+	font-weight: 400;
+}
+
+.event-date {
+	color: #9baf6d;
+	font-size: 78px;
+	font-weight: 700;
+}
+
+.section1 {
+	align-items: flex-end;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	background: url(../images/design_sect1.png) no-repeat;
+	background-origin: content-box;
+	height: 1000px;
+}
+
+.section2 {
+	display:flex;
+	height: 489px;
+}
+
+.section2 h2.title {
+	color: #afc67b;
+	display:block;
+	font-family: "GoodDog Cool";
+	font-size: 29px;
+}
+
+.section2 div.body-text {
+	color: #ffffff;
+	display:block;
+	/*font-family: "Montserrat";*/
+	font-size: 19px;
+	font-weight: 300;
+	height: 228px;
+	line-height: 29px;
+	width: 558px;
+}
+
+.section2 div.design-block {
+	display: block;
+}
+
+.section2 div.text-block {
+	align-items: left;
+	display: flex;
+	flex-direction: column;
+	justify-content: start;
+	padding: 160px 0 0 100px;
+	width: 702px;
+}
+
+.section3 {
+	align-items: center;
+	background-color: #4e5342;
+	display:flex;
+	justify-content: space-around;
+	height: 375px;
+}
+
+
+.section3 h2.title {
+	color: #eaeaea;
+	display:block;
+	font-family: "GoodDog Cool";
+	font-size: 25px;
+	line-height: 33px;
+}
+
+.section3 div.body-text {
+	color: #eaeaea;
+	display:block;
+	/*font-family: "Montserrat";*/
+	font-size: 17px;
+	font-weight: 300;
+	heigth: 70px;
+	line-height: 25px;
+	width: 315px;
+}
+
+.section3 div.block {
+	display:block;
+}
+
+.section3 img {
+	heigth: 36px;
+	width: 27px;
+}
+
+.section4 {
+	align-items: center;
+	margin: 80px auto;
+	width: 1080px;
+}
+
+.section4 div.caption {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	background-color: #4e5342;
+	height: 207px;
+}
+
+.section4 div.dish {
+	width: 270px;
+	height: 274px;
+	background-color: #4e5342;
+	text-align: center;
+}
+
+.section4 .caption .title {
+	color: #afc67b;
+	font-family: "GoodDog Cool";
+	font-size: 46px;
+	/*line-height: 61px;*/
+	margin: 0;
+}
+
+.section4 .caption .subtitle {
+	color: #eaeaea;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 42px;
+	font-weight: 300;
+	/*line-height: 63px;*/
+	margin: 0;
+	text-transform: uppercase;
+}
+
+.section5 {
+	align-items: center;
+	background-color: #45493b;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	height: 400px;
+}
+
+.section5 h2.title {
+	color: #afc67b;
+	font-family: "GoodDog Cool";
+	font-size: 42px;
+	margin: 0;
+}
+
+.section5 p.body-text {
+	color: #dcdcdb;
+	font-family: "Myriad Pro";
+	font-size: 21px;
+	margin: 0;
+	/*height: 74px;*/
+	text-align: center;
+	width: 714px;
+}
+
+.section6 {
+	background: url(../images/design_menu.png) no-repeat;
+	background-origin: content-box;
+	height: 1730px;
+}
+
+.section6 .menu-wrapper {
+	background-color: #3e4136;
+	height: 603px;
+}
+
+.section6 div.caption {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	height: 180px;
+}
+
+.section6 .caption .title {
+	color: #e7e7e7;
+	font-family: "GoodDog Cool";
+	font-size: 71px;
+	/*line-height: 61px;*/
+	margin: 0;
+}
+
+.section6 .caption .subtitle {
+	color: #e7e7e7;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 46px;
+	font-weight: 400;
+	/*line-height: 63px;*/
+	margin: 0;
+	text-transform: uppercase;
+}
+
+/*
+@media ( min-width: 960) {
+	.container4 {
+		width: 1080px;
+		flex-wrap: nowrap;
+	}
+}
+
+@media ( min-width: 320) {
+	.container4 {
+		width: 270px;
+		flex-wrap: wrap;
+	}
+}
+*/
